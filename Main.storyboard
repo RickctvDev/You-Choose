@@ -360,12 +360,11 @@
                         <outlet property="artistTableView" destination="0qk-JD-TKY" id="iFe-t4-bei"/>
                         <outlet property="searchBar" destination="cbg-7R-3Wu" id="EQK-S7-HMw"/>
                         <outlet property="tableView" destination="0qk-JD-TKY" id="e5U-J6-Slc"/>
-                        <segue destination="49e-Tb-3d3" kind="show" id="6Ya-Ir-ddf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNt-w0-lUN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="835" y="1313"/>
+            <point key="canvasLocation" x="821" y="1319"/>
         </scene>
         <!--Profile-->
         <scene sceneID="Lqr-cq-ozA">
@@ -400,7 +399,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X3n-SG-369" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="268" y="1313"/>
+            <point key="canvasLocation" x="159" y="1132"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -413,10 +412,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="9ll-AJ-yey" kind="relationship" relationship="viewControllers" id="0SQ-Jn-Ua2"/>
-                        <segue destination="Vvc-o9-cda" kind="relationship" relationship="viewControllers" id="g4U-o0-6hp"/>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="OCi-LT-9x6"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="GwJ-ty-Thz"/>
+                        <segue destination="9ll-AJ-yey" kind="relationship" relationship="viewControllers" id="uDd-28-f28"/>
+                        <segue destination="Vvc-o9-cda" kind="relationship" relationship="viewControllers" id="w3B-sO-Cxd"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -429,7 +428,4 @@
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="6Ya-Ir-ddf"/>
-    </inferredMetricsTieBreakers>
 </document>

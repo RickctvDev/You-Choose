@@ -12,8 +12,7 @@
 		515999AE1CF386800067605F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 515999AD1CF386800067605F /* Main.storyboard */; };
 		5180B6751CF1EE7B00CECDFF /* iTunesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5180B6741CF1EE7B00CECDFF /* iTunesApi.swift */; };
 		5180B6771CF1F05600CECDFF /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5180B6761CF1F05600CECDFF /* SwiftyJSON.swift */; };
-		5180B6791CF1F37C00CECDFF /* NetworkSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5180B6781CF1F37C00CECDFF /* NetworkSetup.swift */; };
-		5180B67D1CF3753D00CECDFF /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5180B67C1CF3753D00CECDFF /* SearchViewController.swift */; };
+		51BD36871CF3911900A2B9FC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BD36861CF3911900A2B9FC /* SearchViewController.swift */; };
 		51F0962C1CEE39AA00A3CD62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F0962B1CEE39AA00A3CD62 /* AppDelegate.swift */; };
 		51F0962E1CEE39AA00A3CD62 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F0962D1CEE39AA00A3CD62 /* HomeViewController.swift */; };
 		51F096301CEE39AA00A3CD62 /* TrendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F0962F1CEE39AA00A3CD62 /* TrendingViewController.swift */; };
@@ -25,11 +24,10 @@
 /* Begin PBXFileReference section */
 		513353371CF130D5004DAE04 /* ArtistCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArtistCollectionViewCell.swift; path = ../ArtistCollectionViewCell.swift; sourceTree = "<group>"; };
 		515999AB1CF37A080067605F /* ArtistTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistTableViewCell.swift; sourceTree = "<group>"; };
-		515999AD1CF386800067605F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		515999AD1CF386800067605F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
 		5180B6741CF1EE7B00CECDFF /* iTunesApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iTunesApi.swift; path = ../iTunesApi.swift; sourceTree = "<group>"; };
 		5180B6761CF1F05600CECDFF /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
-		5180B6781CF1F37C00CECDFF /* NetworkSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkSetup.swift; path = ../NetworkSetup.swift; sourceTree = "<group>"; };
-		5180B67C1CF3753D00CECDFF /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = ../SearchViewController.swift; sourceTree = "<group>"; };
+		51BD36861CF3911900A2B9FC /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = ../SearchViewController.swift; sourceTree = "<group>"; };
 		51F096281CEE39AA00A3CD62 /* You Choose 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "You Choose 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		51F0962B1CEE39AA00A3CD62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51F0962D1CEE39AA00A3CD62 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -54,7 +52,6 @@
 		51F0961F1CEE39AA00A3CD62 = {
 			isa = PBXGroup;
 			children = (
-				515999AD1CF386800067605F /* Main.storyboard */,
 				51F0962A1CEE39AA00A3CD62 /* You Choose 2.0 */,
 				51F096291CEE39AA00A3CD62 /* Products */,
 				5180B6761CF1F05600CECDFF /* SwiftyJSON.swift */,
@@ -72,8 +69,6 @@
 		51F0962A1CEE39AA00A3CD62 /* You Choose 2.0 */ = {
 			isa = PBXGroup;
 			children = (
-				5180B6781CF1F37C00CECDFF /* NetworkSetup.swift */,
-				5180B6741CF1EE7B00CECDFF /* iTunesApi.swift */,
 				51F096401CEE3A0900A3CD62 /* ViewControllers */,
 				51F0963F1CEE3A0200A3CD62 /* Classes */,
 				51F096411CEE3A1D00A3CD62 /* Supporting Files */,
@@ -84,6 +79,7 @@
 		51F0963F1CEE3A0200A3CD62 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5180B6741CF1EE7B00CECDFF /* iTunesApi.swift */,
 				513353371CF130D5004DAE04 /* ArtistCollectionViewCell.swift */,
 				515999AB1CF37A080067605F /* ArtistTableViewCell.swift */,
 			);
@@ -93,7 +89,7 @@
 		51F096401CEE3A0900A3CD62 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				5180B67C1CF3753D00CECDFF /* SearchViewController.swift */,
+				51BD36861CF3911900A2B9FC /* SearchViewController.swift */,
 				51F096441CEE3AA800A3CD62 /* ArtistViewController.swift */,
 				51F0962D1CEE39AA00A3CD62 /* HomeViewController.swift */,
 				51F0962F1CEE39AA00A3CD62 /* TrendingViewController.swift */,
@@ -104,6 +100,7 @@
 		51F096411CEE3A1D00A3CD62 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				515999AD1CF386800067605F /* Main.storyboard */,
 				51F096341CEE39AA00A3CD62 /* Assets.xcassets */,
 				51F096361CEE39AA00A3CD62 /* LaunchScreen.storyboard */,
 				51F0962B1CEE39AA00A3CD62 /* AppDelegate.swift */,
@@ -184,11 +181,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5180B6791CF1F37C00CECDFF /* NetworkSetup.swift in Sources */,
+				51BD36871CF3911900A2B9FC /* SearchViewController.swift in Sources */,
 				5180B6751CF1EE7B00CECDFF /* iTunesApi.swift in Sources */,
 				515999AC1CF37A080067605F /* ArtistTableViewCell.swift in Sources */,
 				51F096301CEE39AA00A3CD62 /* TrendingViewController.swift in Sources */,
-				5180B67D1CF3753D00CECDFF /* SearchViewController.swift in Sources */,
 				51F0962C1CEE39AA00A3CD62 /* AppDelegate.swift in Sources */,
 				51F0962E1CEE39AA00A3CD62 /* HomeViewController.swift in Sources */,
 				513353381CF130D5004DAE04 /* ArtistCollectionViewCell.swift in Sources */,

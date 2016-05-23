@@ -12,7 +12,7 @@ import iAd
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, ADBannerViewDelegate
 {
     //DECLARING VARIABLES HERE
-    @IBOutlet var adBannerView: ADBannerView?
+    @IBOutlet var adBannerView: ADBannerView!
     @IBOutlet var collectionView: UICollectionView!
     
     var api = ITunesAPI()

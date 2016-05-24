@@ -15,7 +15,6 @@ class ITunesAPI {
     func apiLoader(search: String) -> JSON
     {
         var results = JSON(NSData())
-        // let url = NSURL(string: search)
         
         if let url = NSURL(string: search)
         {
@@ -26,21 +25,6 @@ class ITunesAPI {
         {
             print("the URL was bad!")
         }
-        
-        /*
-        let urlTask = NSURLSession.sharedSession().dataTaskWithURL(url!)
-        {
-            (data, response, error) in
-            
-            if error == nil
-            {
-                //This will hit if it is working
-                results = JSON(data: data!, options: NSJSONReadingOptions.MutableContainers , error: nil)
-            }
-         }
-         urlTask.resume()
-        */
-        
         return results
     }
     
@@ -51,7 +35,7 @@ class ITunesAPI {
     
     func searchForSong(name: String, limit: Int) -> JSON
     {
-        return searchFor(name, searchType: "&entity=song&limit=\(limit)&entity=allArtist&attribute=allArtistTerm")
+        return searchFor(name, searchType: "&entity=song&limit=\(limit)&attribute=songTerm")
     }
     
     func searchForAlbum(name: String, limit: Int) -> JSON
@@ -63,6 +47,8 @@ class ITunesAPI {
     {
         let nameSetup = name.stringByReplacingOccurrencesOfString(" ", withString: "+").lowercaseString
         let search = urlString + "\(nameSetup)" + searchType
+        
+        print(search)
         
         return apiLoader(search)
     }

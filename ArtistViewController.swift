@@ -10,13 +10,11 @@ import UIKit
 
 class ArtistViewController: UIViewController
 {
-    
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var artistName: UILabel!
     
     var image = UIImage()
     var artistLabel = UILabel()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +22,4 @@ class ArtistViewController: UIViewController
         self.imageView.image = self.image
         self.artistName.text = self.artistLabel.text
     }
-    
-    
 }

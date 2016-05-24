@@ -104,8 +104,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         self.adBannerView?.hidden = true
     }
     
-    
-    
     //COLLECTION OF FEATURED ARTIST SETUP HERE
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.artistList.count
@@ -119,10 +117,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         cell.titleLabel?.text = self.artistList[indexPath.row]
         return cell
     }
-    
-    
-    
-    
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         self.performSegueWithIdentifier("showImage", sender: self)
@@ -139,7 +133,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             
             vc.image = self.artistImage[indexPath.row]!
             vc.artistLabel.text = self.artistList[indexPath.row]
-            
         }
     }
     
@@ -151,10 +144,5 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func bannerView(banner: ADBannerView!, didFailToReceiveAdWithError error: NSError!) {
         self.adBannerView?.hidden = true
     }
-    
-    
-    
-   
-    
 }
 

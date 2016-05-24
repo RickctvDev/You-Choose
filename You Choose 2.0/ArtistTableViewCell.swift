@@ -12,4 +12,5 @@ class ArtistTableViewCell: UITableViewCell {
     
     @IBOutlet var artistImage: UIImageView!
     @IBOutlet var artistNameLabel: UILabel!
+    @IBOutlet var artistAlbumName: UILabel!
  }

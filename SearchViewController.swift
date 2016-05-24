@@ -13,11 +13,11 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var artistTableView: UITableView!
     
-    let artistNameArray = ["Rick Crane", "Erik Landvall", "Sexy Chick"]
+    let api = ITunesAPI()
     
-    let artistImageArray = [UIImage(named: "ed"),
-                            UIImage(named: "ed"),
-                            UIImage(named: "ed")]
+    var artistNameArray = [String]()
+    
+    var artistImageArray = [UIImage()]
     
     
     override func viewDidLoad() {
@@ -29,19 +29,46 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = artistTableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! ArtistTableViewCell
         
-        cell.artistImage.image = self.artistImageArray[indexPath.row]
-        cell.artistNameLabel?.text = self.artistNameArray[indexPath.row]
         
+        
+        if(indexPath.row != 0)
+        {
+            cell.artistNameLabel?.text = self.artistNameArray[indexPath.row]
+            cell.artistImage.image = self.artistImageArray[indexPath.row]
+        }
         
         return cell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return artistNameArray.count
     }
     
-    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+    func searchBarSearchButtonClicked(searchBar: UISearchBar)
+    {
+        artistNameArray = [String]()
         
+        if self.searchBar.text != ""
+        {
+            var results = api.searchForAlbum(self.searchBar.text!, limit: 20)
+            for (_,subJson):(String, JSON) in results["results"]
+            {
+                print(subJson)
+                
+                artistNameArray.append(subJson["collectionName"].string!)
+                
+                let surl    = subJson["artworkUrl60"].string
+                let url     = NSURL(string: surl!)
+                let data    = NSData(contentsOfURL: url!)
+                let img     = UIImage(data: data!)
+                artistImageArray.append(img!)
+            }
+        }
+        else
+        {
+            print("Emty search")
+        }
+        artistTableView.reloadData()
     }
 
 }

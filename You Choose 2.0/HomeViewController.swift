@@ -15,10 +15,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet var adBannerView: ADBannerView!
     @IBOutlet var collectionView: UICollectionView!
     
-    var api = ITunesAPI()
-    
-    
-    
     //TESTING ARTIST LIST IN COLLECTION VIEW - *******IMPORTANT******* THEY BOTH ARRAYS BELOW HAVE TO HAVE THE SAME AMOUNTS
     // CONSIDER USING ANOTHER CLASS TO MANAGE THIS!
     let artistList = ["Ed Sheeran",
@@ -102,12 +98,10 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     //SET UP ALL VIEW THINGS HERE
     override func viewDidLoad() {
         super.viewDidLoad()
-        api.searchForArtist("Ed", limit: 20)
         
         self.canDisplayBannerAds = true
         self.adBannerView?.delegate = self
         self.adBannerView?.hidden = true
-        
     }
     
     

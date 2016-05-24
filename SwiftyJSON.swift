@@ -135,7 +135,6 @@ public struct JSON {
     private var _type: Type = .Null
     /// prviate error
     private var _error: NSError? = nil
-
     /// Object in JSON
     public var object: AnyObject {
         get {

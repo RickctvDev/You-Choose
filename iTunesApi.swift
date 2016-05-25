@@ -48,7 +48,7 @@ class ITunesAPI {
         let nameSetup = name.stringByReplacingOccurrencesOfString(" ", withString: "+").lowercaseString
         let search = urlString + "\(nameSetup)" + searchType
         
-        print(search)
+        //print(search)
         
         return apiLoader(search)
     }

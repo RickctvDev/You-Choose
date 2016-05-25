@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		513353381CF130D5004DAE04 /* ArtistCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513353371CF130D5004DAE04 /* ArtistCollectionViewCell.swift */; };
+		5137ACDA1CF656420092CCF8 /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5137ACD91CF656420092CCF8 /* SwipeViewController.swift */; };
 		515999AC1CF37A080067605F /* ArtistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515999AB1CF37A080067605F /* ArtistTableViewCell.swift */; };
 		515999AE1CF386800067605F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 515999AD1CF386800067605F /* Main.storyboard */; };
 		5180B6751CF1EE7B00CECDFF /* iTunesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5180B6741CF1EE7B00CECDFF /* iTunesApi.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		513353371CF130D5004DAE04 /* ArtistCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArtistCollectionViewCell.swift; path = ../ArtistCollectionViewCell.swift; sourceTree = "<group>"; };
+		5137ACD91CF656420092CCF8 /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
 		515999AB1CF37A080067605F /* ArtistTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistTableViewCell.swift; sourceTree = "<group>"; };
 		515999AD1CF386800067605F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
 		5180B6741CF1EE7B00CECDFF /* iTunesApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iTunesApi.swift; path = ../iTunesApi.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				51BD36861CF3911900A2B9FC /* SearchViewController.swift */,
 				51F096441CEE3AA800A3CD62 /* ArtistViewController.swift */,
 				51F0962D1CEE39AA00A3CD62 /* HomeViewController.swift */,
+				5137ACD91CF656420092CCF8 /* SwipeViewController.swift */,
 				51F0962F1CEE39AA00A3CD62 /* TrendingViewController.swift */,
 			);
 			name = ViewControllers;
@@ -186,6 +189,7 @@
 				515999AC1CF37A080067605F /* ArtistTableViewCell.swift in Sources */,
 				51F096301CEE39AA00A3CD62 /* TrendingViewController.swift in Sources */,
 				51F0962C1CEE39AA00A3CD62 /* AppDelegate.swift in Sources */,
+				5137ACDA1CF656420092CCF8 /* SwipeViewController.swift in Sources */,
 				51F0962E1CEE39AA00A3CD62 /* HomeViewController.swift in Sources */,
 				513353381CF130D5004DAE04 /* ArtistCollectionViewCell.swift in Sources */,
 				5180B6771CF1F05600CECDFF /* SwiftyJSON.swift in Sources */,

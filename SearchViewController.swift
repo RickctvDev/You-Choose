@@ -20,22 +20,21 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     let sectionAmount = 3
     let searchLimit = 3
     
-    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        print(indexPath.row)
         let cell = artistTableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! ArtistTableViewCell
-           
+
         cell.artistNameLabel?.text = self.artistNameArray[indexPath.row]
         cell.artistImage.image = self.artistImageArray[indexPath.row]
         cell.artistAlbumName?.text = self.artistAlbumName[indexPath.row]
+        
         return cell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         if artistNameArray.count != 0{
-            return searchLimit
+            return artistNameArray.count  // was searchLimit - remove to show ERIK
         }else{
             return 0
         }
@@ -53,6 +52,12 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let sectionNames = ["Artist", "Album", "Songs"]
         return sectionNames[section]
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    
+            self.view.endEditing(true)
+    }
+    
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar)
     {
@@ -72,12 +77,13 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
             
             let resultsForSong = api.searchForSong(self.searchBar.text!, limit: searchLimit)
             searchResultsOfType("trackName", results: resultsForSong)
+            
         }
         else
         {
             print("Empty search")
         }
-        artistTableView.reloadData()
+        self.artistTableView.reloadData()
     }
 
     
@@ -87,6 +93,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
             {
                 //Provides the table with an array of names found for the NAME label in the Cell
                 artistAlbumName.append(subJson[primary].string!)
+                
             
                 //Provides the tablewith the name of the artist
                 artistNameArray.append(subJson["artistName"].string!)
@@ -97,9 +104,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 let data    = NSData(contentsOfURL: url!)
                 let img     = UIImage(data: data!)
                 artistImageArray.append(img!)
-                
-                //print(subJson)
-            }
+        }
     }
     
     func searchResultsOfTypeArtist(secondary: String, results: JSON)
@@ -117,7 +122,6 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
             
             let id    = subJson["artistId"]
             let surl = "https://itunes.apple.com/lookup?id=\(id)&entity=album"
-            //print(results)
             
             let url     = NSURL(string: surl)
             let data    = NSData(contentsOfURL: url!)
@@ -134,11 +138,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
             else
             {
                 artistImageArray.append(UIImage(named: "ed")!)
+                
             }
         }
-    }
-    
-    func createCell(){
-        
     }
 }
